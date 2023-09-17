@@ -1,0 +1,5 @@
+"use strict";var o=function(e,r){return function(){return r||e((r={exports:{}}).exports,r),r.exports}};var t=o(function(b,s){
+var v=require('@stdlib/assert-is-nonnegative-integer/dist').isPrimitive,g=require('@stdlib/assert-is-string/dist').isPrimitive,m=require('@stdlib/assert-is-boolean/dist').isPrimitive,l=require('@stdlib/slice-base-seq2slice/dist'),i=require('@stdlib/error-tools-fmtprodmsg/dist');function d(e,r,a){var n,u;if(!g(e))throw new TypeError(i("invalid argument. First argument must be a valid subsequence string. Value: `%s`.",e));if(!v(r))throw new TypeError(i('null3X',r));if(!m(a))throw new TypeError(i('nullAL',a));if(u=l(e,r,a),n=u.code,n===void 0)return u;throw n==="ERR_INVALID_INCREMENT"?new RangeError(i("invalid argument. A subsequence string must have a non-zero increment. Value: `%s`.",e)):n==="ERR_OUT_OF_BOUNDS"?new RangeError(i("invalid argument. The subsequence string resolves to a slice which exceeds index bounds. Value: `%s`.",e)):new TypeError(i("invalid argument. First argument must be a valid subsequence string. Value: `%s`.",e))}s.exports=d
+});var c=t();module.exports=c;
+/** @license Apache-2.0 */
+//# sourceMappingURL=index.js.map
