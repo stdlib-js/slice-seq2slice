@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/slice-seq2slice",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Convert a subsequence string to a Slice object.",
   "license": "Apache-2.0",
   "author": {
@@ -40,7 +40,7 @@
     "@stdlib/assert-is-boolean": "^0.0.8",
     "@stdlib/assert-is-nonnegative-integer": "^0.0.7",
     "@stdlib/assert-is-string": "^0.0.8",
-    "@stdlib/slice-base-seq2slice": "github:stdlib-js/slice-base-seq2slice#main",
+    "@stdlib/slice-base-seq2slice": "^0.0.1",
     "@stdlib/string-format": "^0.0.3",
     "@stdlib/types": "^0.0.14"
   },
