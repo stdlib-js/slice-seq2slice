@@ -45,43 +45,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/slice-seq2slice
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-seq2slice = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-seq2slice@umd/browser.js' )
-```
-The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/slice-seq2slice/tags). For example,
-
-```javascript
-seq2slice = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-seq2slice@v0.1.0-umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var seq2slice = require( 'path/to/vendor/umd/slice-seq2slice/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/slice-seq2slice@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.seq2slice;
-})();
-</script>
+var seq2slice = require( '@stdlib/slice-seq2slice' );
 ```
 
 <a name="main"></a>
@@ -196,13 +183,8 @@ var s = seq2slice( '10:20', 10, true );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/slice-seq2slice@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var seq2slice = require( '@stdlib/slice-seq2slice' );
 
 var s = seq2slice( ':', 5, false );
 console.log( 'start: %s. stop: %s. step: %s.', s.start, s.stop, s.step );
@@ -283,11 +265,6 @@ console.log( 'start: %s. stop: %s. step: %s.', s.start, s.stop, s.step );
 s = seq2slice( 'end/2:', 5, false );
 console.log( 'start: %s. stop: %s. step: %s.', s.start, s.stop, s.step );
 // => 'start: 2. stop: 5. step: 1.'
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -349,8 +326,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/slice-seq2slice.svg
 [npm-url]: https://npmjs.org/package/@stdlib/slice-seq2slice
 
-[test-image]: https://github.com/stdlib-js/slice-seq2slice/actions/workflows/test.yml/badge.svg?branch=v0.1.0
-[test-url]: https://github.com/stdlib-js/slice-seq2slice/actions/workflows/test.yml?query=branch:v0.1.0
+[test-image]: https://github.com/stdlib-js/slice-seq2slice/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/slice-seq2slice/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/slice-seq2slice/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/slice-seq2slice?branch=main
@@ -379,7 +356,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/slice-seq2slice/main/LICENSE
 
-[@stdlib/slice/ctor]: https://github.com/stdlib-js/slice-ctor/tree/umd
+[@stdlib/slice/ctor]: https://github.com/stdlib-js/slice-ctor
 
 </section>
 
