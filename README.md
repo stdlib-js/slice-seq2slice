@@ -283,6 +283,12 @@ console.log( 'start: %s. stop: %s. step: %s.', s.start, s.stop, s.step );
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/slice-ctor`][@stdlib/slice/ctor]</span><span class="delimiter">: </span><span class="description">slice constructor.</span>
+
 </section>
 
 <!-- /.related -->
@@ -357,6 +363,10 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/slice-seq2slice/main/LICENSE
 
 [@stdlib/slice/ctor]: https://github.com/stdlib-js/slice-ctor
+
+<!-- <related-links> -->
+
+<!-- </related-links> -->
 
 </section>
 
