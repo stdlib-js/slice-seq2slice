@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import seq2slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-seq2slice@deno/mod.js';
+import seq2slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-seq2slice@v0.2.1-deno/mod.js';
 ```
 
 <a name="main"></a>
@@ -168,7 +168,7 @@ var s = seq2slice( '10:20', 10, true );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import seq2slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-seq2slice@deno/mod.js';
+import seq2slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-seq2slice@v0.2.1-deno/mod.js';
 
 var s = seq2slice( ':', 5, false );
 console.log( 'start: %s. stop: %s. step: %s.', s.start, s.stop, s.step );
