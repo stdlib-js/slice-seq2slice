@@ -100,10 +100,9 @@ No changes reported for this release.
 ### BREAKING CHANGES
 
 -   [`82dea00`](https://github.com/stdlib-js/stdlib/commit/82dea00133a02b5fa3ca4638b390f920003e8a5d): rename error codes
--   [`82dea00`](https://github.com/stdlib-js/stdlib/commit/82dea00133a02b5fa3ca4638b390f920003e8a5d): rename error codes 
 
     -   To migrate, if users were checking for particular error codes, they
-    should add the `SLICE_` prefix to their checks.
+        should add the `SLICE_` prefix to their checks.
 
 </section>
 
