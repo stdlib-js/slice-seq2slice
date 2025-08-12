@@ -45,14 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/slice-seq2slice
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import seq2slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-seq2slice@esm/index.mjs';
+var seq2slice = require( '@stdlib/slice-seq2slice' );
 ```
 
 <a name="main"></a>
@@ -86,7 +104,7 @@ where
 -   If an `increment` is not specified, the default increment is `1`. An increment of zero is **not** allowed.
 -   The `start` index is **inclusive**.
 -   The `stop` index is **exclusive**.
--   Both `start` and `stop` indices are _optional_. If not provided, `start` and `stop` default to index extremes. Which extremes correspond to which index depends on whether the `increment` is positive or negative. 
+-   Both `start` and `stop` indices are _optional_. If not provided, `start` and `stop` default to index extremes. Which extremes correspond to which index depends on whether the `increment` is positive or negative.
 -   Both `start` and `stop` can be negative; in which case, the corresponding index is resolved by subtracting the respective value from the provided length `len`.
 -   Both `start` and `stop` can use the `end` keyword (e.g., `end-2::2`, `end-3:`, etc), which supports basic subtraction and division.
 -   The `end` keyword resolves to the provided length `len`. Thus, `:-1` is equivalent to `:end-1`, `:-2` is equivalent to `:end-2`, and so on and so forth. The exception is when performing a division operation when the `increment` is less than zero; in which case, `end` is equal to `len-1` in order to preserve user expectations when `end/d` equals a whole number and slicing from right-to-left. The result from a division operation is **rounded down** to the nearest integer value.
@@ -152,7 +170,7 @@ var s = seq2slice( '10:20', 10, true );
 -   When `strict` is `false`, the resolved slice start is clamped to the slice index bounds (i.e., `[0, len)`).
 -   When `strict` is `false`, the resolved slice end is upper bound clamped to `len` (i.e., one greater than the last possible index).
 -   When the increment is negative, the resolved slice end value may be `null`, thus indicating that a non-empty slice should include the first index.
--   The function ensures that results satisfy the convention that `:n` combined with `n:` is equivalent to `:` (i.e., selecting all elements). This convention matches Python slice semantics, but diverges from the MATLAB convention where `:n` and `n:` overlap by one element. 
+-   The function ensures that results satisfy the convention that `:n` combined with `n:` is equivalent to `:` (i.e., selecting all elements). This convention matches Python slice semantics, but diverges from the MATLAB convention where `:n` and `n:` overlap by one element.
 -   Unlike MATLAB, but like Python, the subsequence string is upper-bound exclusive. For example, in Python, `0:2` corresponds to the sequence `{0,1}`. In MATLAB, `1:3` corresponds to `{1,2,3}`.
 
 </section>
@@ -167,13 +185,8 @@ var s = seq2slice( '10:20', 10, true );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import seq2slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-seq2slice@esm/index.mjs';
+```javascript
+var seq2slice = require( '@stdlib/slice-seq2slice' );
 
 var s = seq2slice( ':', 5, false );
 console.log( 'start: %s. stop: %s. step: %s.', s.start, s.stop, s.step );
@@ -254,10 +267,6 @@ console.log( 'start: %s. stop: %s. step: %s.', s.start, s.stop, s.step );
 s = seq2slice( 'end/2:', 5, false );
 console.log( 'start: %s. stop: %s. step: %s.', s.start, s.stop, s.step );
 // => 'start: 2. stop: 5. step: 1.'
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -295,7 +304,7 @@ console.log( 'start: %s. stop: %s. step: %s.', s.start, s.stop, s.step );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -358,7 +367,7 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/slice-seq2slice/main/LICENSE
 
-[@stdlib/slice/ctor]: https://github.com/stdlib-js/slice-ctor/tree/esm
+[@stdlib/slice/ctor]: https://github.com/stdlib-js/slice-ctor
 
 <!-- <related-links> -->
 
